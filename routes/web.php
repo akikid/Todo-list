@@ -10,12 +10,18 @@ use App\Http\Controllers\AboutContentController;
 
 Route::get('/', function () {
     return view('home');
+})->name("home");
+
+Route::get('/test', function () {
+    return view('layout.app');
 });
 
+// DIRECT VIEW LINK - SIMPLE X PERLU PROSES APA2
 Route::get('/about', function () {
     return view('about');
-});
+})->name("about");
 
-Route::get('/contact', [ContactController::class, 'index']);
+// CONTROLLER LINK - PERLU PROSES
+Route::get('/contact', [ContactController::class, 'index'])->name("contact");
 Route::resource('home-content', HomeContentController::class);
 Route::resource('about-content', AboutContentController::class);
