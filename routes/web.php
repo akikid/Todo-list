@@ -13,7 +13,10 @@ use App\Http\Controllers\AboutContentController;
 //     TodoController::index();
 // })->name("home");
 Route::get('/', [TodoController::class, 'index'])->name("home");
-Route::post('/', [TodoController::class, 'store'])->name("home");
+Route::post('/', [TodoController::class, 'store'])->name("home.store");
+Route::delete('/task/{todo}', [TodoController::class, 'destroy'])->name("home.delete");
+Route::put('/task/{todo}/update', [TodoController::class, 'update'])->name("home.update");
+Route::get('/task/{todo}/edit', [TodoController::class, 'edit'])->name("home.edit");
 
 Route::get('/test', function () {
     return view('layout.app');
