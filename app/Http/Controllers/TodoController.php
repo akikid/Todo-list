@@ -25,4 +25,23 @@ class TodoController extends Controller
         ]);
         return redirect()->route('home');
     }
+
+    public function destroy(Todo $todo)
+    {
+        $todo->delete();
+        return redirect()->route('home');
+    }
+
+    public function edit(Todo $todo)
+    {
+        return view('home-edit', compact('todo'));
+    }
+
+    public function update(Request $request, Todo $todo)
+    {
+        $todo->update([
+            'todo' => $request->todo,
+        ]);
+        return redirect()->route('home');
+    }
 }
