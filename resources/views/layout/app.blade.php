@@ -20,8 +20,8 @@
         @endif
     </head>
     <body>
-        <navbar class="w-full sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
-            <div class='w-full py-3 border-b'>
+        <navbar class="w-full sticky top-0 left-0 right-0 bg-white shadow-md">
+            <div class='w-full py-3 border-b bg-white'>
 
                 <div class='flex justify-between px-20 items-center font-semibold'>
                 <div>
